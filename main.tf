@@ -361,7 +361,7 @@ output "lb_dns_name" {
 
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "batch4pmdevopswithaws2024"  
+  bucket = "nikhilprojectterraform2024"  
 
   acl    = "private"  
   versioning {
@@ -369,18 +369,4 @@ resource "aws_s3_bucket" "my_bucket" {
   }
 }
 
-resource "aws_iam_user" "one" {
-for_each = var.iam_users
-name = each.value
-}
-
-variable "iam_users" {
-description = ""
-type = set(string)
-default = ["user1", "user2", "user3", "user3"]
-}
-
-resource "aws_iam_group" "two" {
-name = "devopswithaws"
-}
 
