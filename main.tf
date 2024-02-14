@@ -138,7 +138,7 @@ resource "aws_instance" "webserver1" {
   ami                    = "ami-0d5eff06f840b45e9"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "rahammm"
+  key_name               = "virginia"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
   user_data              = "${file("apache.sh")}"
@@ -152,7 +152,7 @@ resource "aws_instance" "webserver2" {
   ami                    = "ami-0d5eff06f840b45e9"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "rahammm"
+  key_name               = "virginia"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-2.id
   user_data              = "${file("apache.sh")}"
@@ -167,7 +167,7 @@ resource "aws_instance" "appserver1" {
   ami                    = "ami-0d5eff06f840b45e9"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "rahammm"
+  key_name               = "virginia"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-1.id
   tags = {
@@ -179,7 +179,7 @@ resource "aws_instance" "appserver2" {
   ami                    = "ami-0d5eff06f840b45e9"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "rahammm"
+  key_name               = "virginia"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-2.id
 
@@ -196,8 +196,8 @@ resource "aws_db_instance" "default" {
   instance_class         = "db.t2.micro"
   multi_az               = false
   db_name                = "mydb"
-  username               = "raham"
-  password               = "Rahamshaik#444555"
+  username               = "nikhil"
+  password               = "nikhil#321654987"
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.database-sg.id]
 }
