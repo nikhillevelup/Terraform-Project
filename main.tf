@@ -361,7 +361,7 @@ output "lb_dns_name" {
 
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "nikhilprojectterraform2024"  
+  bucket = "nikhilprojectterraform1522024"  
 
   acl    = "private"  
   versioning {
